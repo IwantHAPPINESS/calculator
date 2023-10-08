@@ -92,6 +92,7 @@ h6 {
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic");
 
 body {
+    // height: 100vh;
     font-family: Roboto;
     background-color: rgb(87, 83, 83);
 }
@@ -100,8 +101,12 @@ body {
     justify-content: center;
     align-content: center;
     flex-wrap: wrap;
+    margin: 200px 0 0 0;
 }
 .calc {
+    border: 5px solid orangered;
+    border-radius: 15px;
+    padding: 20px;
     // .calc__input
 
     &__input {
@@ -115,6 +120,7 @@ body {
     // .calc__number
 
     &__number {
+        margin-top: 20px;
         display: grid;
 
         height: 150px;

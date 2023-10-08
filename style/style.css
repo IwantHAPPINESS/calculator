@@ -99,8 +99,14 @@ body {
   justify-content: center;
   align-content: center;
   flex-wrap: wrap;
+  margin: 200px 0 0 0;
 }
 
+.calc {
+  border: 5px solid orangered;
+  border-radius: 15px;
+  padding: 20px;
+}
 .calc__input {
   width: 200px;
   height: 25px;
@@ -110,6 +116,7 @@ body {
   padding: 0 0 0 5px;
 }
 .calc__number {
+  margin-top: 20px;
   display: grid;
   height: 150px;
   grid-template-columns: 30px 30px 30px 30px;

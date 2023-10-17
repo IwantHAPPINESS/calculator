@@ -15,7 +15,7 @@ export var calculator = function (str) {
     case "*":
       return numOne * numTwo;
     case "%":
-      return numOne % numTwo;
+      return (numOne * numTwo) / 100;
     default:
       return "ERROR"; // Добавлено обработчик для неподдерживаемых операторов
   }

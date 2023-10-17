@@ -1,0 +1,56 @@
+{
+    "cells": [
+        {
+            "language": "javascript",
+            "source": [
+                "var calculator = function (str) {\r\n\r\n  let numOne = parseInt(str.match(/^[0-9]+/)[0]);\r\n\r\n  let operator = str.match(/[\\+\\-\\*\\/\\%]/)[0];\r\n\r\n  let numTwo = parseInt(str.match(/[0-9]+$/)[0]); // Убран лишний пробел между 0 и 9\r\n\r\n  switch (operator) {\r\n    case '+':\r\n      return numOne + numTwo;\r\n    case '-':\r\n      return numOne - numTwo;\r\n    case '/':\r\n      return numOne / numTwo;\r\n    case '*':\r\n      return numOne * numTwo;\r\n    case '%':\r\n      return numOne % numTwo;\r\n    default:\r\n      return \"ERROR\"; // Добавлено обработчик для неподдерживаемых операторов\r\n  }\r\n};\r\n\r\nconsole.log(calculator('9+9')); // Результат будет 18\r\n"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "9",
+                                "18",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "let str = '9'\r\n\r\nlet func = Function(str, `return ${str} + 9`)\r\nconsole.log(func)\r\n\r\n// const regNumOne = /^[0-9]+/;\r\n  // const regOperator = /[\\+\\-\\*\\/\\%]/;\r\n  // const regNumTwo = /[0 - 9]+$/;"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.error",
+                            "value": {
+                                "name": "SyntaxError",
+                                "message": "Unexpected number",
+                                "stack": "    at Function (<anonymous>)\n    at <Cell 2> [3, 0]\n    at <Cell 2> [6, 46]"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
